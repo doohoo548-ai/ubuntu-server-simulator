@@ -1,23 +1,119 @@
-# Change <h1> to: <h1>Ubuntu Simulator by [mAiyc] - ITC Cambodia</h1><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Ubuntu Server Simulator</title>
+    <title>Ubuntu Server Simulator - ITC Edition</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Ubuntu Server Simulator</h1>
-        <div class="terminal">
-            <div class="output" id="output">
-                <p>Welcome to Ubuntu Server Simulator!</p>
-                <p>Type "help" for commands</p>
+        <header>
+            <i class="fab fa-ubuntu"></i>
+            <div class="header-text">
+                <h1>Ubuntu Server Simulator</h1>
+                <p class="subtitle">ITC Cambodia Edition 🇰🇭</p>
             </div>
-            <div class="input">
-                <span>$ </span>
-                <input type="text" id="command" autofocus>
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="close"></span>
+                    <span class="minimize"></span>
+                    <span class="maximize"></span>
+                </div>
+                itc-student@ubuntu-server:~$
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="terminal" id="terminal">
+                <div class="output">
+                    <p>Welcome to Ubuntu Server Simulator - ITC Edition!</p>
+                    <p>Type 'help' for 20+ available commands.</p>
+                    <p>System: Ubuntu 22.04 LTS | User: itc-student</p>
+                    <p class="prompt">itc-student@ubuntu-server:~$ <span id="last-command"></span></p>
+                </div>
+                <div class="input-line">
+                    <span class="prompt">itc-student@ubuntu-server:~$ </span>
+                    <input type="text" id="command-input" autofocus placeholder="Type command here...">
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="info-box">
+                    <h3><i class="fas fa-server"></i> Server Status</h3>
+                    <p><i class="fas fa-circle online"></i> <span class="status-text">Online</span></p>
+                    <p><i class="fas fa-microchip"></i> CPU: <span class="cpu">12%</span></p>
+                    <p><i class="fas fa-memory"></i> RAM: <span class="ram">1.2/7.8 GB</span></p>
+                    <p><i class="fas fa-hdd"></i> Disk: <span class="disk">45%</span> used</p>
+                    <p><i class="fas fa-network-wired"></i> IP: <span class="ip">192.168.1.100</span></p>
+                </div>
+
+                <div class="quick-commands-box">
+                    <h3><i class="fas fa-bolt"></i> Quick Commands</h3>
+                    <div class="command-grid">
+                        <button onclick="executeCommand('help')">help</button>
+                        <button onclick="executeCommand('ls')">ls</button>
+                        <button onclick="executeCommand('pwd')">pwd</button>
+                        <button onclick="executeCommand('date')">date</button>
+                        <button onclick="executeCommand('whoami')">whoami</button>
+                        <button onclick="executeCommand('neofetch')">neofetch</button>
+                        <button onclick="executeCommand('ifconfig')">ifconfig</button>
+                        <button onclick="executeCommand('ps aux')">ps aux</button>
+                        <button onclick="executeCommand('df -h')">df -h</button>
+                        <button onclick="executeCommand('cal')">cal</button>
+                        <button onclick="executeCommand('hello cambodia')">hello 🇰🇭</button>
+                        <button onclick="executeCommand('git status')">git status</button>
+                    </div>
+                </div>
+
+                <div class="command-history">
+                    <h3><i class="fas fa-history"></i> Recent Commands</h3>
+                    <div id="history-list">
+                        <p>> help</p>
+                        <p>> ls</p>
+                        <p>> pwd</p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="command-categories">
+            <div class="category">
+                <h4><i class="fas fa-terminal"></i> Basic</h4>
+                <button onclick="executeCommand('clear')">clear</button>
+                <button onclick="executeCommand('hostname')">hostname</button>
+                <button onclick="executeCommand('uname -a')">uname -a</button>
+            </div>
+            <div class="category">
+                <h4><i class="fas fa-file"></i> Files</h4>
+                <button onclick="executeCommand('ls -la')">ls -la</button>
+                <button onclick="executeCommand('mkdir test')">mkdir</button>
+                <button onclick="executeCommand('touch file.txt')">touch</button>
+            </div>
+            <div class="category">
+                <h4><i class="fas fa-chart-line"></i> System</h4>
+                <button onclick="executeCommand('top')">top</button>
+                <button onclick="executeCommand('free -h')">free -h</button>
+                <button onclick="executeCommand('ping google.com')">ping</button>
+            </div>
+            <div class="category">
+                <h4><i class="fas fa-gamepad"></i> Fun</h4>
+                <button onclick="executeCommand('cmatrix')">cmatrix</button>
+                <button onclick="executeCommand('fortune')">fortune</button>
+                <button onclick="executeCommand('itc')">itc</button>
+            </div>
+        </div>
+
+        <footer>
+            <p><i class="fas fa-user-graduate"></i> Institute of Technology of Cambodia - ITC Student Project</p>
+            <p class="github-link">
+                <i class="fab fa-github"></i> 
+                <a href="https://github.com/doohoo548-ai/ubuntu-server-simulator" target="_blank">
+                    github.com/doohoo548-ai/ubuntu-server-simulator
+                </a>
+            </p>
+        </footer>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

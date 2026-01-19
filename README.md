@@ -1,12 +1,12 @@
-# Ubuntu Server Simulator
-Simple web-based Ubuntu terminal simulator
+# Ubuntu Server Simulator - ITC Edition 🇰🇭
 
-## How to Run
-1. ./run.sh
-2. Open browser: http://localhost:8080
+An advanced Ubuntu terminal simulator with 20+ Linux commands for ITC Cambodia students.
 
-## Commands
-- help: Show commands
-- date: Show date
-- ls: List files
-- pwd: Show directory
+## 🚀 Features
+- **20+ Linux Commands**: Full terminal simulation
+- **Real-time Server Status**: CPU, RAM, Disk monitoring
+- **Quick Command Buttons**: One-click execution
+- **Command Categories**: Organized by function
+- **ITC Cambodia Theme**: Special features for Cambodian students
+
+## 📁 Project Structure
