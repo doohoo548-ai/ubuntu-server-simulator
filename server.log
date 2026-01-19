@@ -15,5 +15,6 @@
 10.0.2.2 - - [19/Jan/2026 15:23:47] "GET /style.css HTTP/1.1" 304 -
 10.0.2.2 - - [19/Jan/2026 15:23:47] "GET /script.js HTTP/1.1" 304 -
 10.0.2.2 - - [19/Jan/2026 15:23:54] "GET / HTTP/1.1" 304 -
-^^^^^^^
-OSError: [Errno 98] Address already in use
+10.0.2.2 - - [19/Jan/2026 15:31:30] "GET / HTTP/1.1" 304 -
+10.0.2.2 - - [19/Jan/2026 15:31:30] "GET /style.css HTTP/1.1" 304 -
+10.0.2.2 - - [19/Jan/2026 15:31:30] "GET /script.js HTTP/1.1" 304 -
